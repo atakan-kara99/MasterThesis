@@ -1,6 +1,6 @@
 # Master Thesis (LaTeX project)
 
-Short repository for a Master's thesis written in LaTeX. This repo contains the source files, figures and data used to build the **final PDF** of the thesis.
+Short repository for a Master's thesis written in LaTeX. This repo contains the source files, figures and data used to build the [final PDF](Masterarbeit___Atakan_Kara.pdf) of the thesis.
 
 ## What this repository contains
 
@@ -15,8 +15,5 @@ Short repository for a Master's thesis written in LaTeX. This repo contains the 
 The project roadmap is included as a PDF in the repository and can be viewed below.
 
 <p>
-  <img src="images/roadmap_thumbnail.png" alt="Roadmap thumbnail" style="max-width:420px;">
+  <img src="images/roadmap.png" alt="Roadmap" style="max-width:300px;">
 </p>
-
-[View / Download Master Thesis](Masterarbeit___Atakan_Kara.pdf)
-
