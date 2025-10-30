@@ -1,0 +1,200 @@
+\documentclass[
+  11pt,            % Font size
+  a4paper,         % A4 layout
+  twoside,         % For two-sided printing
+]{report}
+
+% ------------------------------------------------------------------------
+% Encoding and Language
+% ------------------------------------------------------------------------
+\usepackage[T1]{fontenc}       % Important for correct hyphenation in accented words
+\usepackage[utf8]{inputenc}    % If you compile with pdfLaTeX
+\usepackage[english]{babel}    % Language settings
+\usepackage{lmodern}           % Latin Modern font
+\usepackage{microtype}         % Better typographical control
+
+% ------------------------------------------------------------------------
+% Page Layout
+% ------------------------------------------------------------------------
+\usepackage[top=2cm, right=3cm, bottom=2cm, left=3cm, head=16.49677pt]{geometry}
+
+% ------------------------------------------------------------------------
+% Math and Symbols
+% ------------------------------------------------------------------------
+\usepackage{amsmath,amssymb}   % AMS math packages
+\usepackage{physics}           % For large norm symbols etc.
+\usepackage{listofsymbols}     % For the symbol list
+\renewcommand{\symheading}{\chapter*{List of Symbols}}
+
+% ------------------------------------------------------------------------
+% Figures, Tables, and Graphics
+% ------------------------------------------------------------------------
+\usepackage{graphicx}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{tikz}
+\usetikzlibrary{arrows,automata,shapes,calc}
+\usepackage{tabularx}
+\usepackage{booktabs}
+\usepackage{multirow}
+\usepackage{array}
+\usepackage{makecell}
+\usepackage[table]{xcolor}
+\usepackage{wrapfig}
+
+% ------------------------------------------------------------------------
+% Additional Packages
+% ------------------------------------------------------------------------
+\usepackage[official]{eurosym} % Euro symbol
+\usepackage{acronym}           % Abbreviations
+\usepackage{enumitem}          % Better control of lists
+\usepackage{etoolbox}          % General utility for conditionals
+\usepackage{amsthm}            % For theorem environments
+
+% ------------------------------------------------------------------------
+% Line spacing
+% ------------------------------------------------------------------------
+\usepackage{setspace}
+\onehalfspacing
+
+% ------------------------------------------------------------------------
+% Page headings/footers (KOMA-like style)
+% ------------------------------------------------------------------------
+\usepackage[automark]{scrlayer-scrpage}
+\clearpairofpagestyles
+\ihead{}           % You can define your left header here
+\chead{}           % Center header is empty
+\ohead{\pagemark}  % Right header shows page number
+\pagestyle{scrheadings}
+
+% ------------------------------------------------------------------------
+% Hyperlinks
+% ------------------------------------------------------------------------
+\PassOptionsToPackage{hyphens}{url}
+\usepackage{hyperref}
+
+% ------------------------------------------------------------------------
+% Document
+% ------------------------------------------------------------------------
+\begin{document}
+
+% ------------------------------------------------------------------------
+% Title Page
+% ------------------------------------------------------------------------
+\hypersetup{pageanchor=false} % Avoid duplicate page anchors
+\thispagestyle{empty}
+\includegraphics[width=\columnwidth]{images/cau-norm-de-lilagrey-rgb-0720.png}
+
+\begin{center}
+    \vspace{1.00cm}
+    
+    INSTITUT FÜR INFORMATIK \\
+    TECHNISCHE FAKULTÄT \\
+    CHRISTIAN-ALBRECHTS-UNIVERSITÄT ZU KIEL
+    
+    \vspace{2.00cm}
+    
+    {\huge Master Thesis}
+    
+    \vspace{2.00cm}
+    
+    {\Huge Autoencoder Architectures and \\ Loss Objectives for Preserving \\[0.5cm] In-Between Instances}
+    
+    \vspace{2.50cm}
+    
+    First examiner: Prof. Dr. Peer Kröger \\
+    Second examiner: Dr. Daniyal Kazempour
+    
+    \vspace{1.00cm}
+    
+    Author: \\
+    {Yilmaz Atakan Kara, 1137425} \\
+    {Westring 288, 24116 Kiel} \\
+    {stu216493@mail.uni-kiel.de}
+    
+    \vspace{1.00cm}
+
+    Handed in on: \\
+    Kiel, 05.09.2025
+\end{center}
+
+\newpage
+
+% ------------------------------------------------------------------------
+% Eidesstattliche Erklärung
+% ------------------------------------------------------------------------
+\section*{Eidesstattliche Erklärung}
+Ich versichere an Eides statt, dass ich die vorstehende Arbeit selbständig und ohne fremde Hilfe angefertigt und mich anderer als der im beigefügten Verzeichnis angegebenen Hilfsmittel nicht bedient habe. Alle Stellen, die wörtlich oder sinngemäß aus Veröffentlichungen übernommen wurden, sind als solche kenntlich gemacht. Alle Internetquellen sind der Arbeit beigefügt. Des Weiteren versichere ich, dass ich die Arbeit vorher nicht in einem anderen Prüfungsverfahren eingereicht habe und dass die eingereichte schriftliche Fassung der auf dem elektronischen Speichermedium entspricht.\\
+
+\vspace{3cm}
+\begin{flushleft}
+Ort, Datum \hspace{10.84cm} Unterschrift
+\end{flushleft}
+\thispagestyle{empty}
+
+% ------------------------------------------------------------------------
+% Abstract
+% ------------------------------------------------------------------------
+\input{0_abstract}
+
+% ------------------------------------------------------------------------
+% Table of Contents
+% ------------------------------------------------------------------------
+\newpage
+\hypersetup{pageanchor=true}
+\pagenumbering{Roman}
+\renewcommand{\thepage}{\Roman{page}}
+\tableofcontents
+
+% ------------------------------------------------------------------------
+% List of Figures
+% ------------------------------------------------------------------------
+%\newpage
+%\cleardoublepage
+%\listoffigures
+%\addcontentsline{toc}{chapter}{List of Figures}
+
+% ------------------------------------------------------------------------
+% List of Tables
+% ------------------------------------------------------------------------
+%\newpage
+%\cleardoublepage
+%\listoftables
+%\addcontentsline{toc}{chapter}{List of Tables}
+
+% ------------------------------------------------------------------------
+% Main Content
+% ------------------------------------------------------------------------
+\newpage
+\pagenumbering{arabic}
+\renewcommand{\thepage}{\arabic{page}}
+\newpage
+\input{1_introduction}
+\newpage
+\input{2_theoretical_foundation}
+\newpage
+\input{3_related_work}
+\newpage
+\input{4_method}
+\newpage
+\input{5_experiments}
+\newpage
+\input{6_conclusion}
+
+% ------------------------------------------------------------------------
+% Bibliography
+% ------------------------------------------------------------------------
+\newpage
+\addcontentsline{toc}{chapter}{Bibliography}
+\bibliographystyle{abbrv}
+\bibliography{bibliography}
+
+% ------------------------------------------------------------------------
+% Appendix (if needed)
+% ------------------------------------------------------------------------
+%\newpage
+%\appendix
+%\chapter{First}
+%\input{chapters/7_appendix}
+
+\end{document}
