@@ -17,7 +17,7 @@ Overall, the results show that careful loss design matters more than marginal ar
 The project roadmap is included as a PDF in the repository and can be viewed below.
 
 <p>
-  <img src="images/roadmap.png" alt="Roadmap" style="max-width:300px;">
+  <img src="images/roadmap.png" alt="Roadmap">
 </p>
 
 ## What this repository contains
