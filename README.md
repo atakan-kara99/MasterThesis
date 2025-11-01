@@ -4,6 +4,8 @@ Short repository for a Master's thesis written in LaTeX. This repo contains the 
 
 **NOTE: THIS THESIS IS RELATED TO THE [CODE FRAMEWORK](https://github.com/atakan-kara99/AutoencoderFramework).**
 
+### Title: Autoencoder Architectures and Loss Objectives for Preserving In-Between Instances
+
 ## Abstract
 
 Autoencoders are widely used for representation learning, yet they tend to blur the transitional regions between clusters where “in-between instances” (IBIs) reside, points that share affinities with multiple groups and carry important structural information. This thesis systematically studies how architectural choices and, more decisively, loss objectives affect an autoencoder’s ability to preserve IBIs. In a controlled setting with basic feed-forward autoencoders, we evaluate ten synthetic 2D/3D datasets containing explicit IBI ground truth and restrict latents to two or three dimensions for direct visual adjudication of cluster geometry and IBI placement. We also introduce a differentiable “soft trustworthiness” loss that approximates neighborhood preservation for gradient-based training, and we compare unsupervised losses (MSE, cosine similarity, KLD, soft trustworthiness) with supervised extensions (triplet margin, cosine embedding). 
